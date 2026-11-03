@@ -175,3 +175,23 @@ footer {
     padding: 1.25rem;
   }
 }
+
+
+
+.event-date {
+  font-weight: 600;
+  color: var(--accent-color, #d9692b);
+  margin: 0.25rem 0;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.success-msg {
+  color: #16a34a;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
