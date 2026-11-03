@@ -27,4 +27,31 @@ let events = [
     date: "Nov 06, 2026",
     description: "Hands-on session with cloud deployments and web APIs."
   }
-];
+];// index.html dinamik kart listeleme
+const eventContainer = document.querySelector("#event-list");
+
+function renderEvents() {
+  if (!eventContainer) return;
+  eventContainer.innerHTML = "";
+
+  for (const item of events) {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.dataset.id = item.id;
+
+    const titleEl = document.createElement("h3");
+    titleEl.textContent = item.title;
+
+    const dateEl = document.createElement("p");
+    dateEl.className = "event-date";
+    dateEl.textContent = `Date: ${item.date}`;
+
+    const descEl = document.createElement("p");
+    descEl.textContent = item.description;
+
+    card.append(titleEl, dateEl, descEl);
+    eventContainer.append(card);
+  }
+}
+
+renderEvents();
