@@ -3,7 +3,6 @@
 MIS 457 - Web Based Application Programming (Week 2 Assignment)
 
 ### Team Members & Contributions (Week 3)
-
 * Başak Kılıç: Project Setup, app.js Architecture & HTML Integration
 * İrgenur Yıldırım: Dynamic Event List Rendering (DOM Manipulation)
 * İkranur Gültekin: Form Validation, Event Handling & Error Alerts
