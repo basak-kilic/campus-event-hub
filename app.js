@@ -80,3 +80,21 @@ if (registrationForm) {
     registrationForm.reset();
   });
 }
+const searchInput = document.querySelector('#search-input');
+
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const filteredEvents = events.filter(item => 
+            item.title.toLowerCase().includes(query) || 
+            item.description.toLowerCase().includes(query)
+        );
+        renderEvents(filteredEvents);
+
+        if (filteredEvents.length === 0) {
+            statusMessage.textContent = 'No events found matching your search.';
+        } else {
+            statusMessage.textContent = '';
+        }
+    });
+}
