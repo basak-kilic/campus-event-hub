@@ -3,7 +3,22 @@ console.log("Campus Event Hub - app.js loaded!");
 
 // Dinamik Etkinlik Verisi (State)
 let events = [];
+const statusMessage = document.querySelector('#status-message');
 // index.html dinamik kart listeleme
+async function loadEvents() {
+    statusMessage.textContent = 'Loading events...';
+    try {
+        const response = await fetch('data.json');
+        if (!response.ok) {
+            throw new Error('HTTP ' + response.status);
+        }
+        events = await response.json();
+        statusMessage.textContent = '';
+        renderEvents(events);
+    } catch (error) {
+        statusMessage.textContent = 'Could not load events. Please try again later.';
+    }
+}
 const eventContainer = document.querySelector("#event-list");
 
 function renderEvents() {
@@ -30,7 +45,7 @@ function renderEvents() {
   }
 }
 
-renderEvents();
+loadEvents();
 // form.html validasyon ve submit kontrolü
 const registrationForm = document.querySelector("form");
 const nameInput = document.querySelector("#name") || document.querySelector("input[type='text']");
