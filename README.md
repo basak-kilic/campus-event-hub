@@ -17,3 +17,6 @@ MIS 457 - Web Based Application Programming (Week 2 Assignment)
 - Lighthouse Accessibility score: 90+
 - Dynamic event cards rendered from JavaScript array (DOM manipulation)
 - Client-side form validation with descriptive alerts and XSS prevention (textContent)
+- Asynchronous data loading from data.json via Fetch API
+- Four UI states (Loading, Success, Empty, Error)
+- Live search filtering
