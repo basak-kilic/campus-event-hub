@@ -2,12 +2,12 @@
 
 MIS 457 - Web Based Application Programming (Week 2 Assignment)
 
-### Team Members & Contributions (Week 3)
-* Başak Kılıç: Project Setup, app.js Architecture & HTML Integration
-* İrgenur Yıldırım: Dynamic Event List Rendering (DOM Manipulation)
-* İkranur Gültekin: Form Validation, Event Handling & Error Alerts
-* Tuğçenaz Kanyılmaz: CSS Styling for Dynamic Cards & Validation States
-* Görkem Gökçe: Documentation, QA Testing & Code Review
+### Team Members & Contributions (Week 4)
+* Başak Kılıç: JSON Data Architecture & Mock Data Setup
+* İrgenur Yıldırım: Async Fetch Implementation & Four States Handling
+* İkranur Gültekin: Live Search Filtering & Empty State Control
+* Tuğçenaz Kanyılmaz: CSS Styling for Search & Status States
+* Görkem Gökçe: QA Testing, Network Request Audits & Documentation
 
 ## Features
 - Semantic HTML5 structure (Header, Nav, Main, Footer)
