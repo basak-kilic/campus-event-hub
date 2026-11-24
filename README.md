@@ -1,6 +1,6 @@
 # Campus Event Hub
 
-MIS 457 - Web Based Application Programming (Week 2 Assignment)
+MIS 457 - Web Based Application Programming
 
 ### Team Members & Contributions (Week 5)
 * Başak Kılıç: Express & CORS Setup
