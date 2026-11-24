@@ -2,12 +2,12 @@
 
 MIS 457 - Web Based Application Programming (Week 2 Assignment)
 
-### Team Members & Contributions (Week 4)
-* Başak Kılıç: JSON Data Architecture & Mock Data Setup
-* İrgenur Yıldırım: Async Fetch Implementation & Four States Handling
-* İkranur Gültekin: Live Search Filtering & Empty State Control
-* Tuğçenaz Kanyılmaz: CSS Styling for Search & Status States
-* Görkem Gökçe: QA Testing, Network Request Audits & Documentation
+### Team Members & Contributions (Week 5)
+* Başak Kılıç: Express & CORS Setup
+* İrgenur Yıldırım: CRUD Endpoints
+* İkranur Gültekin: Frontend API Connection
+* Tuğçenaz Kanyılmaz: REST API Design Table
+* Görkem Gökçe: Postman Tests & Collection Export
 
 ## Features
 - Semantic HTML5 structure (Header, Nav, Main, Footer)
