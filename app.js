@@ -8,7 +8,7 @@ const statusMessage = document.querySelector('#status-message');
 async function loadEvents() {
     statusMessage.textContent = 'Loading events...';
     try {
-        const response = await fetch('data.json');
+        const response = await fetch("http://localhost:3000/api/events");
         if (!response.ok) {
             throw new Error('HTTP ' + response.status);
         }
