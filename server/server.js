@@ -55,7 +55,51 @@ app.get("/api/events/:id", (req, res) => {
   }
   res.json(event);
 });
+app.post("/api/events", (req, res) => {
+  const { title, date, description } = req.body;
 
+  if (!title || !date) {
+    return res.status(400).json({ error: "title and date are required" });
+  }
+
+  const newEvent = {
+    id: Date.now(),
+    title,
+    date,
+    description: description ?? ""
+  };
+
+  events.push(newEvent);
+  return res.status(201).json(newEvent);
+});
+
+app.put("/api/events/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const event = events.find((item) => item.id === id);
+
+  if (!event) {
+    return res.status(404).json({ error: "Event not found" });
+  }
+
+  const { title, date, description } = req.body;
+  if (title !== undefined) event.title = title;
+  if (date !== undefined) event.date = date;
+  if (description !== undefined) event.description = description;
+
+  return res.json(event);
+});
+
+app.delete("/api/events/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const exists = events.some((item) => item.id === id);
+
+  if (!exists) {
+    return res.status(404).json({ error: "Event not found" });
+  }
+
+  events = events.filter((item) => item.id !== id);
+  return res.status(204).end();
+});
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
